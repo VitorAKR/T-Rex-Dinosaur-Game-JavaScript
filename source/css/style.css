@@ -1,0 +1,74 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#game{
+   width: 500px;
+   height: 200px;
+   margin: auto;
+   /*border: 1px solid black;*/
+   border-bottom: 2px solid gray;
+}
+
+#cloud{
+    width: 70px;
+    height: 50px;
+    padding-top: 25px;
+    position: relative;
+    top: 10px;
+    left: 430px;
+    z-index: -1;
+    /*border: 1px solid black;*/
+    animation: cloud 5s infinite;
+}
+
+#dino{
+    padding-top: 15px;
+    width: 55px;
+    height: 50px;
+    position: relative;
+    top: 100px;
+    /* border: 1px solid black; */
+}
+
+.animationJump{
+    animation: jump 500ms;
+}
+
+#cacti{
+    width: 75px;
+    height: 50px;
+    position: relative;
+    top: 50px;
+    left: 430px;
+    /* border: 1px solid black; */
+    /*  Add animation to the object*/
+    animation: cacti 1s infinite;
+}
+
+img{
+    max-width: 110%;
+    max-height: 100%;
+    display: block;
+}
+
+/*Add animation to the dino (jump)*/
+@keyframes jump{
+    0%{top:100px;}
+    30%{top:-50px;}
+    50%{top:-50px;}
+    100%{top:100px;}
+}
+
+/*Add animation to the cacti*/
+@keyframes cacti{
+    0%{left:430px;}
+    100%{left:-40px;}
+}
+
+/*Add animation to the cacti*/
+@keyframes cloud{
+    0%{left:430px;}
+    100%{left:-80px;}
+}
